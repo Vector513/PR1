@@ -133,18 +133,18 @@ void fourthTask() {
 
 	char mirror[64];
 	for (int i = 0; i <= order/2; i++) {
-		mirror[i] = (arr[0] & mask) ? '1' : '0';
+		mirror[i] = (arr[1] & mask) ? '1' : '0';
 		putchar(mirror[i]);
-		arr[0] <<= 1;
+		arr[1] <<= 1;
 		if (i == 0 || i == 11) {
 			putchar(32);
 		}
 	}
 
 	for (int i = order / 2 + 1; i <= order; i++) {
-		mirror[i] = (arr[1] & mask) ? '1' : '0';
+		mirror[i] = (arr[0] & mask) ? '1' : '0';
 		putchar(mirror[i]);
-		arr[1] <<= 1;
+		arr[0] <<= 1;
 	}
 
 	char command[1000];
